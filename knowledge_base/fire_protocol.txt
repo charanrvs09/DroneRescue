@@ -1,0 +1,44 @@
+DRONERESCUE FIRE EMERGENCY PROTOCOL
+
+Purpose:
+Provide operational guidance for drone-assisted fire verification and emergency response.
+
+1. INITIAL RESPONSE
+- Treat a fire alert as an incident requiring verification.
+- The Incident Agent should evaluate alert confidence before dispatch.
+- Dispatch should only occur when the incident meets the configured dispatch threshold.
+
+2. DRONE SELECTION
+- Prefer an available drone with sufficient battery.
+- For fire verification, prefer drones equipped with both RGB and thermal cameras.
+- Do not select an offline or unavailable drone.
+
+3. INITIAL OBSERVATION
+- Take off only after safety checks pass.
+- Navigate to the incident coordinates.
+- Capture an RGB image for visual verification.
+- Analyze the image for flames, smoke, structural damage, and other emergency indicators.
+
+4. THERMAL VERIFICATION
+- If RGB analysis indicates a high-confidence fire, perform thermal inspection.
+- Thermal imagery should be used to identify hot regions and support fire severity assessment.
+- A thermal inspection must not be executed if the selected drone lacks a thermal camera.
+
+5. LOW-CONFIDENCE OBSERVATIONS
+- If vision confidence is below the configured threshold, do not escalate immediately.
+- Reposition the drone when appropriate.
+- Capture another observation.
+- Re-evaluate the new evidence before making an emergency decision.
+
+6. SAFETY REQUIREMENTS
+- Maintain minimum battery reserves.
+- Never bypass the Safety Governor.
+- Unsafe actions must be blocked.
+- High-risk emergency actions require human approval.
+
+7. MISSION COMPLETION
+- After required observations are completed, return the drone to its designated home location.
+- Record mission actions, observations, safety decisions, and outcomes for later review.
+
+8. IMPORTANT RULE
+AI agents provide recommendations and decisions, but deterministic safety controls remain authoritative over drone execution.

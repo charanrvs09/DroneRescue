@@ -1,0 +1,35 @@
+DRONERESCUE BATTERY POLICY
+
+Purpose:
+Define battery-management rules for safe drone emergency operations.
+
+1. MINIMUM OPERATING RESERVE
+- A drone must maintain at least 25% battery to execute operational actions.
+- Drones below 25% battery must not be dispatched.
+
+2. FLEET SELECTION
+- The Fleet Agent should consider battery level when selecting a drone.
+- Prefer a drone with sufficient battery for the planned mission.
+- Battery level alone must not override sensor or availability requirements.
+
+3. MISSION MONITORING
+- Battery status should be checked before critical actions.
+- Long missions should account for the energy required to return home.
+- A drone approaching a critical battery state should prioritize returning home.
+
+4. LOW-BATTERY RESPONSE
+- If battery falls below the configured safety threshold, new mission actions should be blocked.
+- The system should recommend return-to-home or reassignment when appropriate.
+- Another suitable drone may be selected if the mission still requires aerial support.
+
+5. SAFETY GOVERNOR
+- Battery constraints are enforced by the Safety Governor.
+- AI agents must not override battery restrictions.
+- A mission must never continue solely because an AI agent recommends continuing.
+
+6. HUMAN OVERSIGHT
+- Operators should be informed when battery conditions affect an emergency mission.
+- Any exception to standard battery policy requires explicit human authorization and appropriate safety controls.
+
+7. CORE PRINCIPLE
+The drone must always retain enough operational margin to safely terminate its mission and return to a designated safe location.

@@ -1,0 +1,44 @@
+DRONERESCUE SECURITY RESPONSE PROTOCOL
+
+Purpose:
+Define drone-assisted procedures for security incidents and unauthorized activity.
+
+1. INCIDENT DETECTION
+- Security alerts may originate from perimeter sensors, cameras, access-control systems, or authorized personnel.
+- Record the incident type, location, timestamp, source, and confidence.
+- The initial alert should be treated as evidence requiring verification.
+
+2. DRONE DISPATCH
+- The Incident Agent determines whether aerial verification is justified.
+- The Fleet Agent should select an available drone with sufficient battery.
+- Prefer a drone with appropriate RGB imaging capability for visual verification.
+
+3. VISUAL VERIFICATION
+- Capture RGB imagery from a safe observation position.
+- Analyze imagery for people, vehicles, damaged barriers, unauthorized activity, or other relevant evidence.
+- Low-confidence observations should trigger additional observation rather than immediate escalation.
+
+4. OPERATIONAL SAFETY
+- Every drone action must pass through the Safety Governor.
+- The drone must remain within approved operational boundaries.
+- The system must not intentionally endanger people or property.
+
+5. HUMAN OVERSIGHT
+- Identification of suspicious activity should be treated as an assessment, not automatic proof of wrongdoing.
+- High-risk interventions require human authorization.
+- AI agents must not independently initiate physical confrontation or enforcement actions.
+
+6. DYNAMIC RESPONSE
+- New observations should update the incident assessment.
+- The Decision Agent may recommend continued monitoring, repositioning, additional image capture, or escalation to a human operator.
+- If the situation changes significantly, the mission should be replanned.
+
+7. EVIDENCE HANDLING
+- Store relevant imagery, timestamps, drone identifiers, locations, analysis results, and confidence scores.
+- Evidence should remain traceable to the observation that produced it.
+
+8. MISSION COMPLETION
+- After verification is complete, the drone should return to a safe location unless an authorized operator directs otherwise.
+
+9. CORE PRINCIPLE
+AI assists with security situational awareness, but human operators retain authority over consequential security decisions.

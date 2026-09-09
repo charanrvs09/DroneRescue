@@ -1,0 +1,42 @@
+DRONERESCUE DRONE SAFETY PROTOCOL
+
+Purpose:
+Define mandatory safety constraints for autonomous and agent-assisted drone operations.
+
+1. BATTERY SAFETY
+- A drone must have at least 25% battery before executing an operational action.
+- Drones below the minimum battery threshold must not be dispatched.
+- Battery-critical missions must be terminated or redirected to return home.
+
+2. DRONE STATUS
+- Only available drones may be dispatched for a new emergency mission.
+- Offline drones must never be used.
+- A drone already assigned to another mission should not be selected unless explicitly released.
+
+3. CAMERA CAPABILITIES
+- RGB observations require an RGB camera.
+- Thermal observations require a thermal camera.
+- An AI agent must never assume that a drone has a sensor it does not possess.
+
+4. MISSION EXECUTION
+- Every drone action must pass through the Safety Governor.
+- Agents must not directly bypass safety validation.
+- If a safety check fails, the requested action must be blocked.
+
+5. NAVIGATION
+- Drone movement must remain within approved operational boundaries.
+- Unknown or invalid destinations must be rejected.
+- Emergency missions should maintain a safe return path whenever possible.
+
+6. HUMAN OVERSIGHT
+- High-risk actions require human approval.
+- Examples include payload release, intervention near people, hazardous-area entry, and other actions with significant safety consequences.
+- Human approval must not be bypassed by an AI agent.
+
+7. FAILURE HANDLING
+- If a drone becomes unavailable, the system should stop affected actions.
+- If another suitable drone exists, the Fleet Agent may recommend reassignment.
+- If no safe alternative exists, the mission should enter a controlled fallback state.
+
+8. CORE SAFETY PRINCIPLE
+The Safety Governor has final authority over whether an AI-recommended drone action may execute.
